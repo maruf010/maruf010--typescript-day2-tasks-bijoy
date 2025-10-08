@@ -70,3 +70,17 @@ class Dog implements Animal {
 }
 const myDog = new Dog("Buddy");
 console.log(`${myDog.name} says ${myDog.sound()}`);
+
+// 6. Generic Function
+function getLastItem<T>(arr: T[]): T | null {
+  return arr.length ? arr[arr.length - 1] : null;
+}
+console.log(getLastItem([1, 2, 3, 4]));
+
+// 7. Module Export/Import
+import { add, subtract } from "./utils/mathUtils.ts";
+
+console.log("Add:", add(10, 5));
+console.log("Subtract:", subtract(10, 5));
+
+//  8. Simple CLI Program
